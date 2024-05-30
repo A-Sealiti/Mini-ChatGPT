@@ -1,0 +1,148 @@
+body {
+  background-color: #3f3f5a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#chatbox {
+  width: 600px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #3f3f5a;
+  color: #f5f5f9;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  margin-bottom: 60px;
+}
+
+#new-conversation {
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+#new-conversation span {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+#input-field {
+  width: 600px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #3f3f5a;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#recent-chat {
+  border-radius: 6px;
+  margin-right: 1400px;
+  margin-bottom: 300px;
+  color: aliceblue;
+  box-sizing: revert;
+  width: 90px;
+  height: 60px;
+  margin-left: 30px;
+  font-size: 20px;
+  position: fixed;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  font-size: 50px;
+  color: rgb(29, 2, 124);
+  cursor: pointer;
+}
+
+
+.button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+.copyright {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10px;
+  bottom: unset;
+}
+
+.copyright h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+}
+ 
+/* Mediaquery voor schermen kleiner dan 600px breedte */
+@media only screen and (max-width: 600px) {
+  #input-field {
+    width: calc(100% - 20px);
+  }
+
+  #new-conversation {
+    width: 100%;
+    left: 0;
+    top: 5px;
+    transform: none;
+  }
+
+  #chatbox {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  #send-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .arrow {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
